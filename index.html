@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Glassmorphism Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-box">
+        <div class="toggle-buttons">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="signupBtn">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="form active">
+            <h2 class="form-heading">Login</h2>
+            <div class="input-box">
+                <input type="email" required placeholder=" " id="loginEmail">
+                <label>Email</label>
+                <small class="error-message">Please enter a valid email</small>
+            </div>
+            <div class="input-box password-box">
+                <input type="password" required placeholder=" " id="loginPassword">
+                <label>Password</label>
+                <span class="toggle-password" onclick="togglePassword(this)">👁️</span>
+                <small class="error-message">Password is required</small>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="form">
+            <h2 class="form-heading">Sign Up</h2>
+            <div class="input-box">
+                <input type="text" required placeholder=" " id="signupUsername">
+                <label>Username</label>
+                <small class="error-message">Username is required</small>
+            </div>
+            <div class="input-box">
+                <input type="email" required placeholder=" " id="signupEmail">
+                <label>Email</label>
+                <small class="error-message">Please enter a valid email</small>
+            </div>
+            <div class="input-box password-box">
+                <input type="password" required placeholder=" " id="signupPassword">
+                <label>Password</label>
+                <span class="toggle-password" onclick="togglePassword(this)">👁️</span>
+                <small class="error-message">Password must be at least 6 characters</small>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
